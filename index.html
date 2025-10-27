@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundación Calma</title>
-  <meta name="description" content="Fundación Calma – acompañando a personas y comunidades hacia una vida más consciente y solidaria.">
+  <title>Fundación C.A.L.M.A.</title>
+  <meta name="description" content="Fundación C.A.L.M.A. – acompañando a personas y comunidades hacia una vida más consciente y solidaria.">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Scroll suave */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,16 +19,15 @@
   <!-- HEADER / NAVBAR -->
   <header>
     <div class="logo">
-      <img src="img/logo.png" alt="Logo Fundación Calma">
-      <h1>Fundación Calma</h1>
+      <img src="assets/LOGO.jpg" alt="C.A.L.M.A.">
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="programas.html">Programas</a></li>
-        <li><a href="donar.html">Donar</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#hero" class="active">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#programas">Programas</a></li>
+        <li><a href="#cta">Donar</a></li>
+        <li><a href="#contacto-home">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -30,17 +35,23 @@
   <!-- HERO / PORTADA -->
   <section id="hero">
     <div class="hero-content">
-      <h2>Transformamos la calma en acción</h2>
+      <h2>Transformamos la C.A.L.M.A. en acción</h2>
       <p>Trabajamos para mejorar la calidad de vida de las personas a través de proyectos sociales, educativos y ambientales.</p>
-      <a href="donar.html" class="btn">Sumate</a>
+      <a href="#cta" class="btn">Sumate</a>
     </div>
   </section>
 
-  <!-- SECCIÓN: SOBRE NOSOTROS (resumen corto) -->
-  <section id="about">
-    <h2>Sobre Fundación Calma</h2>
+  <!-- SECCIÓN: NOSOTROS -->
+  <section id="nosotros">
+    <h2>Sobre Fundación C.A.L.M.A.</h2>
     <p>Somos una organización sin fines de lucro dedicada a promover el bienestar integral de comunidades vulnerables, a través de programas de contención emocional, educación y desarrollo sostenible.</p>
-    <a href="nosotros.html" class="btn">Conocé más</a>
+    <a href="#nosotros-detalle" class="btn">Conocé más</a>
+  </section>
+
+  <!-- SECCIÓN DETALLE NOSOTROS (opcional) -->
+  <section id="nosotros-detalle">
+    <h3>Nuestra Misión y Valores</h3>
+    <p>En Fundación C.A.L.M.A. trabajamos con compromiso, transparencia y dedicación para acompañar a personas y comunidades.</p>
   </section>
 
   <!-- SECCIÓN: PROGRAMAS DESTACADOS -->
@@ -64,20 +75,32 @@
         <h3>Medioambiente</h3>
         <p>Proyectos de reciclaje, reforestación y concientización ecológica.</p>
       </article>
+
+        <article class="programa">
+        <img src="img/programa3.jpg" alt="Programa 4">
+        <h3>Medioambiente</h3>
+        <p>Proyectos de reciclaje, reforestación y concientización ecológica.</p>
+      </article>
+
+        <article class="programa">
+        <img src="img/programa3.jpg" alt="Programa 5">
+        <h3>Medioambiente</h3>
+        <p>Proyectos de reciclaje, reforestación y concientización ecológica.</p>
+      </article>
     </div>
   </section>
 
-  <!-- SECCIÓN: LLAMADO A LA ACCIÓN -->
+  <!-- SECCIÓN: LLAMADO A LA ACCIÓN / DONAR -->
   <section id="cta">
     <h2>Tu ayuda hace la diferencia</h2>
     <p>Con tu colaboración podemos seguir transformando realidades.</p>
-    <a href="donar.html" class="btn">Hacer una donación</a>
+    <a href="#contacto-home" class="btn">Hacer una donación</a>
   </section>
 
-  <!-- SECCIÓN: CONTACTO RÁPIDO -->
+  <!-- SECCIÓN: CONTACTO -->
   <section id="contacto-home">
     <h2>Contactanos</h2>
-    <form action="mailto:info@fundacioncalma.com" method="post" enctype="text/plain">
+    <form action="mailto:info@fundacionC.A.L.M.A..com" method="post" enctype="text/plain">
       <input type="text" name="nombre" placeholder="Tu nombre" required>
       <input type="email" name="email" placeholder="Tu correo electrónico" required>
       <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
@@ -88,7 +111,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-info">
-      <p>© 2025 Fundación Calma — Todos los derechos reservados</p>
+      <p>© 2025 Fundación C.A.L.M.A. — Todos los derechos reservados</p>
       <ul class="social">
         <li><a href="#" target="_blank">Facebook</a></li>
         <li><a href="#" target="_blank">Instagram</a></li>
