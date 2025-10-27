@@ -73,25 +73,60 @@ section {
   padding: 100px 2rem 60px; /* 100px top para navbar fija */
   min-height: 80vh;
 }
-
 #hero {
-  background: url('assets/hero-bg.jpg') no-repeat center center/cover;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  /* Eliminamos estilos previos de background y centrado */
+  padding: 0; /* Eliminamos el padding para que el contenido lateral lo controle */
   min-height: 100vh;
+  display: flex;
+  background-color: #fff; /* Fondo blanco por defecto */
+}
+
+.hero-container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la vista */
+    max-width: 1400px; /* Opcional: limita el ancho máximo */
+    margin: 0 auto;
+}
+
+.hero-izquierda {
+    flex: 1; /* Ocupa el 50% del ancho */
+    background-color: #fff; /* Fondo blanco sólido */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    padding: 2rem; /* Padding interno */
+}
+
+.hero-derecha {
+    flex: 1; /* Ocupa el otro 50% del ancho */
+    /* RUTA DE TU IMAGEN AQUÍ - Reemplaza 'assets/actividad.jpeg' */
+    background: url('assets/actividad.jpg') no-repeat center center/cover; 
+    filter: brightness(0.95) grayscale(20%) blur(1px); /* Ajusta brillo, gris y desenfoque */
+    min-height: 50vh; /* Asegura una altura mínima */
+}
+
+.hero-content {
+  max-width: 90%; /* Limita el ancho del texto para una mejor lectura */
+  text-align: left; /* Alineamos el texto a la izquierda dentro de su contenedor */
+  color: #333; /* El color del texto debe ser oscuro sobre el fondo blanco */
 }
 
 #hero h2 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* Ajuste para un título de sección */
   margin-bottom: 1rem;
+  color: #6b5b95; /* Color destacado de tu fundación */
 }
 
 #hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.btn {
+  /* Mantenemos los estilos del botón ya definidos */
+  margin-top: 1.5rem;
 }
 
 .btn {
@@ -346,12 +381,39 @@ footer .social li a:hover {
       min-height: auto;
   }
   
-  #hero h2 {
-    font-size: 2rem;
-  }
-  #hero p {
-    font-size: 1rem;
-  }
+/* ============================
+    RESPONSIVE para HERO
+============================ */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column; /* Apilar en dispositivos móviles */
+        height: auto; /* Permite que la altura crezca con el contenido */
+    }
+
+    .hero-izquierda {
+        order: 2; /* Movemos el texto abajo de la imagen */
+        min-height: 60vh;
+        padding: 40px 1rem;
+    }
+
+    .hero-derecha {
+        order: 1; /* Movemos la imagen arriba del texto */
+        min-height: 300px;
+        height: 50vh; /* La imagen de fondo ocupa 50% de la vista */
+    }
+
+    .hero-content {
+      max-width: 100%;
+      text-align: center; /* Centramos el texto en móviles */
+    }
+    
+    #hero h2 {
+      font-size: 2rem;
+    }
+    #hero p {
+      font-size: 1rem;
+    }
+}
 
   .nosotros-info-grid {
       flex-direction: column; /* Apilamiento vertical en móvil */
