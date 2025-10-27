@@ -149,49 +149,22 @@ section {
 #nosotros {
   background-color: #fff;
   text-align: center;
+  padding-bottom: 20px; /* Reducción de 60px a 20px */
 }
 
 #nosotros h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Aseguramos un pequeño margen en el título */
+  /* margin-bottom: 1rem; */
 }
 
 #nosotros p {
   max-width: 900px;
-  margin: 0 auto 2rem;
+margin: 0 auto 0;
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.nosotros-info-grid {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 3rem auto;
-  text-align: left;
-}
-
-.nosotros-info-grid article {
-  flex: 1;
-  padding: 1.5rem;
-  border-left: 3px solid #6b5b95;
-}
-
-.nosotros-info-grid h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-  color: #57427f;
-}
-
-.nosotros-info-grid ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-}
-
-.nosotros-info-grid li {
-  margin-bottom: 0.5rem;
-}
 
 
 /* ============================
@@ -200,6 +173,9 @@ section {
 #programas {
   background-color: #f0f0f0;
   text-align: center;
+  padding-top: 40px; 
+  padding-bottom: 60px;
+ min-height: 50vh; /* Opcional: reducimos el min-height si solo quieres el contenido */
 }
 
 .programas-grid {
@@ -415,22 +391,9 @@ footer .social li a:hover {
     }
 }
 
-  .nosotros-info-grid {
-      flex-direction: column; /* Apilamiento vertical en móvil */
-      gap: 2rem;
-  }
-  .nosotros-info-grid article {
-      border-left: none;
-      border-top: 3px solid #6b5b95;
-      padding-top: 1.5rem;
-      text-align: center;
-  }
-  .nosotros-info-grid h3 {
-      text-align: center;
-  }
-  .nosotros-info-grid ul {
-      text-align: left;
-  }
+  #nosotros {
+    padding-bottom: 10px; /* Reducción aún más agresiva en móvil */
+}
 
   .programas-grid {
     flex-direction: column;
@@ -438,6 +401,7 @@ footer .social li a:hover {
   }
   .programa {
       width: 90%; /* Ajuste de ancho para los programas */
+      padding-top: 20px; /* Reducción aún más agresiva en móvil */
   }
 
 }
