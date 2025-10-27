@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -16,13 +16,12 @@
 
 <body>
 
-  <!-- HEADER / NAVBAR -->
   <header>
     <div class="logo">
-      <img src="assets/LOGO.jpg" alt="C.A.L.M.A.">
+      <img src="assets/logo.png" alt="C.A.L.M.A.">
     </div>
-    <nav>
-      <ul>
+    <button class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
+    <nav class="nav-menu"> <ul>
         <li><a href="#hero" class="active">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#programas">Programas</a></li>
@@ -32,7 +31,6 @@
     </nav>
   </header>
 
-  <!-- HERO / PORTADA -->
   <section id="hero">
     <div class="hero-content">
       <h2>Transformamos la C.A.L.M.A. en acción</h2>
@@ -41,63 +39,68 @@
     </div>
   </section>
 
-  <!-- SECCIÓN: NOSOTROS -->
   <section id="nosotros">
     <h2>Sobre Fundación C.A.L.M.A.</h2>
-    <p>Somos una organización sin fines de lucro dedicada a promover el bienestar integral de comunidades vulnerables, a través de programas de contención emocional, educación y desarrollo sostenible.</p>
-    <a href="#nosotros-detalle" class="btn">Conocé más</a>
+    <p>Somos una organización sin fines de lucro dedicada a promover el bienestar integral de comunidades vulnerables, a través de programas de contención emocional, educación y desarrollo sostenible. **Nuestra visión es un mundo donde cada persona tenga acceso a las herramientas necesarias para desarrollar su máximo potencial en un entorno de paz y equidad.**</p>
+    <div class="nosotros-info-grid">
+      <article>
+        <h3>Nuestra Misión</h3>
+        <p>Acompañar a personas y comunidades hacia una vida más consciente, solidaria y resiliente, ejecutando programas sociales, educativos y ambientales de alto impacto.</p>
+      </article>
+      <article>
+        <h3>Nuestros Valores</h3>
+        <ul>
+          <li>**Compromiso:** Dedicación total a nuestros objetivos.</li>
+          <li>**Transparencia:** Manejo claro y honesto de recursos.</li>
+          <li>**Empatía:** Conexión genuina con las necesidades de la comunidad.</li>
+          <li>**Sostenibilidad:** Enfoque a largo plazo en nuestros proyectos.</li>
+        </ul>
+      </article>
+    </div>
+    <a href="#programas" class="btn">Conocé nuestros programas</a>
   </section>
 
-  <!-- SECCIÓN DETALLE NOSOTROS (opcional) -->
-  <section id="nosotros-detalle">
-    <h3>Nuestra Misión y Valores</h3>
-    <p>En Fundación C.A.L.M.A. trabajamos con compromiso, transparencia y dedicación para acompañar a personas y comunidades.</p>
-  </section>
-
-  <!-- SECCIÓN: PROGRAMAS DESTACADOS -->
   <section id="programas">
     <h2>Nuestros Programas</h2>
     <div class="programas-grid">
       <article class="programa">
-        <img src="img/programa1.jpg" alt="Programa 1">
+        <img src="img/programa1.jpg" alt="Apoyo Comunitario">
         <h3>Apoyo Comunitario</h3>
         <p>Acciones directas para asistir a familias y comunidades en situación de vulnerabilidad.</p>
       </article>
 
       <article class="programa">
-        <img src="img/programa2.jpg" alt="Programa 2">
+        <img src="img/programa2.jpg" alt="Educación y Contención">
         <h3>Educación y Contención</h3>
         <p>Talleres y acompañamiento emocional a niños, jóvenes y adultos.</p>
       </article>
 
       <article class="programa">
-        <img src="img/programa3.jpg" alt="Programa 3">
-        <h3>Medioambiente</h3>
+        <img src="img/programa3.jpg" alt="Medioambiente">
+        <h3>Medioambiente Consciente</h3>
         <p>Proyectos de reciclaje, reforestación y concientización ecológica.</p>
       </article>
 
         <article class="programa">
-        <img src="img/programa3.jpg" alt="Programa 4">
-        <h3>Medioambiente</h3>
-        <p>Proyectos de reciclaje, reforestación y concientización ecológica.</p>
+        <img src="img/programa4.jpg" alt="Salud Integral">
+        <h3>Salud Integral</h3>
+        <p>Jornadas de salud preventiva y acceso a servicios básicos para la comunidad.</p>
       </article>
 
         <article class="programa">
-        <img src="img/programa3.jpg" alt="Programa 5">
-        <h3>Medioambiente</h3>
-        <p>Proyectos de reciclaje, reforestación y concientización ecológica.</p>
+        <img src="img/programa5.jpg" alt="Capacitación Laboral">
+        <h3>Capacitación Laboral</h3>
+        <p>Talleres de oficios y herramientas para la inserción al mercado de trabajo.</p>
       </article>
     </div>
   </section>
 
-  <!-- SECCIÓN: LLAMADO A LA ACCIÓN / DONAR -->
   <section id="cta">
     <h2>Tu ayuda hace la diferencia</h2>
     <p>Con tu colaboración podemos seguir transformando realidades.</p>
     <a href="#contacto-home" class="btn">Hacer una donación</a>
   </section>
 
-  <!-- SECCIÓN: CONTACTO -->
   <section id="contacto-home">
     <h2>Contactanos</h2>
     <form action="mailto:info@fundacionC.A.L.M.A..com" method="post" enctype="text/plain">
@@ -108,7 +111,6 @@
     </form>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-info">
       <p>© 2025 Fundación C.A.L.M.A. — Todos los derechos reservados</p>
@@ -119,6 +121,31 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    // JavaScript para controlar el menú desplegable (menú hamburguesa)
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      const navLinks = document.querySelectorAll('.nav-menu ul li a');
+
+      // Alternar el menú al hacer clic en el botón
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.textContent = navMenu.classList.contains('active') ? '✖' : '☰'; // Cambia el ícono
+      });
+
+      // Cerrar el menú al hacer clic en un enlace (importante en móviles)
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            navMenu.classList.remove('active');
+            menuToggle.textContent = '☰'; // Restaura el ícono
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
