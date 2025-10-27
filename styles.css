@@ -144,38 +144,132 @@ section {
 }
 
 /* ============================
-    NOSOTROS / ABOUT (Actualizado)
+    NOSOTROS / ABOUT (Actualizado con MISIÓN, VISIÓN y LOGROS)
 ============================ */
 #nosotros {
-  background-color: #fff;
+  background-color: #f7f9fb; /* Fondo muy suave para destacar de las secciones blancas */
   text-align: center;
-  padding-bottom: 20px; /* Reducción de 60px a 20px */
+  padding-top: 166px; /* Ajuste para que no esté demasiado pegado al hero */
+  padding-bottom: 100px; /* Espacio antes del siguiente elemento */
+  min-height: auto;
 }
 
 #nosotros h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem; /* Aseguramos un pequeño margen en el título */
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1.5rem;
+  color: #6b5b95; /* Color destacado */
 }
 
 #nosotros p {
   max-width: 900px;
-margin: 0 auto 0;
+  margin: 0 auto 3rem; /* Aumentamos el margen para separar del grid Misión/Visión */
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
+/* --- MISIÓN Y VISIÓN (TARJETAS) --- */
+.mision-vision-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+.tarjeta-proposito {
+    flex: 1;
+    background-color: #ffffff; /* Las tarjetas internas son blancas */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-bottom: 5px solid #6b5b95; /* Borde inferior de color principal */
+}
+
+.icono-proposito {
+    /* Si usas emojis, esto da el tamaño y color. Si usas imágenes, usa la regla img. */
+    font-size: 3rem;
+    color: #6b5b95;
+    margin-bottom: 1rem;
+}
+.icono-proposito img {
+    height: 60px;
+    width: auto;
+}
+
+.tarjeta-proposito h3 {
+    color: #57427f;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.tarjeta-proposito p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 auto; /* Sobreescribe el margen general del p para las tarjetas */
+}
+
+
+/* --- LOGROS EN DATOS --- */
+.logros-container {
+    background-color: #fff; /* Se separa con un fondo blanco sólido */
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid #ddd;
+}
+
+.logros-container h3 {
+    font-size: 2rem;
+    color: #6b5b95;
+    margin-bottom: 2.5rem;
+}
+
+.datos-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.dato-item {
+    width: 30%;
+    text-align: center;
+}
+
+.icono-dato {
+    font-size: 3rem;
+    color: #6b5b95;
+    margin-bottom: 0.5rem;
+}
+
+.numero-dato {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+.numero-dato span {
+    color: #6b5b95; /* Color principal destacado */
+}
+
+.descripcion-dato {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 auto;
+    max-width: 250px;
+}
 
 
 /* ============================
-    PROGRAMAS (sin cambios)
+    PROGRAMAS
 ============================ */
 #programas {
   background-color: #f0f0f0;
   text-align: center;
-  padding-top: 40px; 
+  padding-top: 160px; /* Ajuste para quitar espacio */
   padding-bottom: 60px;
- min-height: 50vh; /* Opcional: reducimos el min-height si solo quieres el contenido */
+  min-height: 50vh;
 }
 
 .programas-grid {
@@ -200,10 +294,20 @@ margin: 0 auto 0;
 }
 
 .programa img {
-  width: 100%;
-  height: auto; /* Ajuste para evitar deformación */
-  border-radius: 5px;
-  margin-bottom: 1rem;
+    width: 100%;
+    /* 1. Mantiene la imagen en una relación de aspecto cuadrada */
+    aspect-ratio: 1 / 1; 
+    
+    /* 2. Asegura que la imagen cubra el área sin distorsionarse */
+    object-fit: cover; 
+    
+    /* 3. ¡Convierte la imagen en un círculo! */
+    border-radius: 50%; 
+    
+    margin-bottom: 1rem;
+    /* Opcional: Añade un borde sutil al círculo para resaltarlo */
+    /* border: 3px solid #6b5b95;  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .programa h3 {
@@ -212,7 +316,7 @@ margin: 0 auto 0;
 }
 
 /* ============================
-    CTA / DONAR (sin cambios)
+    CTA / DONAR
 ============================ */
 #cta {
   background-color: #6b5b95;
@@ -231,7 +335,7 @@ margin: 0 auto 0;
 }
 
 /* ============================
-    CONTACTO (sin cambios)
+    CONTACTO
 ============================ */
 #contacto-home {
   background-color: #fff;
@@ -274,7 +378,7 @@ margin: 0 auto 0;
 }
 
 /* ============================
-    FOOTER (sin cambios)
+    FOOTER
 ============================ */
 footer {
   background-color: #333;
@@ -309,8 +413,8 @@ footer .social li a:hover {
       padding: 0.5rem 1rem;
     }
     header .logo img {
-     height: 60px; /* se reduce en celulares/tablets */
-   }
+      height: 60px; /* se reduce en celulares/tablets */
+    }
 
   /* Mostrar el botón de menú y ocultar la navegación por defecto */
   .menu-toggle {
@@ -353,29 +457,29 @@ footer .social li a:hover {
   
   /* Contenido */
   section {
-      padding: 80px 1rem 40px; /* Ajuste el padding para móviles */
-      min-height: auto;
+    padding: 80px 1rem 40px; /* Ajuste el padding para móviles */
+    min-height: auto;
   }
   
 /* ============================
     RESPONSIVE para HERO
 ============================ */
-@media (max-width: 768px) {
+
     .hero-container {
-        flex-direction: column; /* Apilar en dispositivos móviles */
-        height: auto; /* Permite que la altura crezca con el contenido */
+      flex-direction: column; /* Apilar en dispositivos móviles */
+      height: auto; /* Permite que la altura crezca con el contenido */
     }
 
     .hero-izquierda {
-        order: 2; /* Movemos el texto abajo de la imagen */
-        min-height: 60vh;
-        padding: 40px 1rem;
+      order: 2; /* Movemos el texto abajo de la imagen */
+      min-height: 60vh;
+      padding: 40px 1rem;
     }
 
     .hero-derecha {
-        order: 1; /* Movemos la imagen arriba del texto */
-        min-height: 300px;
-        height: 50vh; /* La imagen de fondo ocupa 50% de la vista */
+      order: 1; /* Movemos la imagen arriba del texto */
+      min-height: 300px;
+      height: 50vh; /* La imagen de fondo ocupa 50% de la vista */
     }
 
     .hero-content {
@@ -389,19 +493,35 @@ footer .social li a:hover {
     #hero p {
       font-size: 1rem;
     }
-}
 
-  #nosotros {
-    padding-bottom: 10px; /* Reducción aún más agresiva en móvil */
-}
 
+  
+  /**/
   .programas-grid {
     flex-direction: column;
     align-items: center;
   }
   .programa {
       width: 90%; /* Ajuste de ancho para los programas */
-      padding-top: 20px; /* Reducción aún más agresiva en móvil */
+  }
+  #programas {
+      padding-top: 20px; 
   }
 
+  /* Ajuste de padding para la sección Nosotros */
+#nosotros {
+  /* Reducimos el padding en móvil, ya que el section general ya da 80px */
+  padding-top: 40px; 
+  padding-bottom: 20px;
+}
+
+/* Apilamiento de Misión/Visión */
+.mision-vision-grid {
+    flex-direction: column;
+    gap: 2rem;
+}
+.tarjeta-proposito {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+    margin-bottom: 1rem;
+}
 }
