@@ -32,7 +32,7 @@ header {
 }
 
 header .logo img {
-  height: 50px;
+  height: 80px;
   width: 120px;
 }
 
@@ -300,9 +300,6 @@ section {
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
-
-
-
 
 /* ============================
     PROGRAMAS (Ajuste de enlace)
