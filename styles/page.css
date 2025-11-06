@@ -1,0 +1,200 @@
+/* ============================
+   BASE / RESET
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+/* ============================
+   HEADER (usa estilo similar al index)
+============================ */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+header .logo img {
+  height: 50px;
+  width: 120px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #6b5b95;
+}
+
+/* ============================
+   MAIN CONTENT
+============================ */
+main {
+  padding: 140px 1.5rem 60px; /* espacio superior por header fijo */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section, .recursos-container {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+  color: #6b5b95;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h2 {
+  color: #6b5b95;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #57427f;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+/* Listas */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.4rem;
+}
+
+/* Bloques destacados */
+blockquote {
+  border-left: 5px solid #6b5b95;
+  padding-left: 1rem;
+  color: #555;
+  font-style: italic;
+  background: #f7f9fb;
+  border-radius: 5px;
+}
+
+/* ============================
+   BOTONES
+============================ */
+.btn {
+  display: inline-block;
+  background-color: #6b5b95;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #57427f;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+footer .social li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .social li a:hover {
+  color: #6b5b95;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  main {
+    padding: 120px 1rem 40px;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
