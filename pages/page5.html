@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acción y Prevención frente a la Violencia - C.A.L.M.A.</title>
     <meta name="description" content="Recursos de contención y ayuda frente a situaciones de violencia en Lomas de Zamora, Lanús, Quilmes, Avellaneda, Florencio Varela y Berazategui.">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="../styles.css"> 
     <style>
         /* Estilos específicos para la página de recursos */
         .recursos-container {
@@ -63,15 +63,15 @@
 
     <header>
         <div class="logo">
-            <img src="assets/logo.png" alt="C.A.L.M.A.">
+            <img src="../assets/logo.png" alt="C.A.L.M.A.">
         </div>
         <nav class="nav-menu"> 
             <ul>
-                <li><a href="index.html#hero">Inicio</a></li>
-                <li><a href="index.html#nosotros">Nosotros</a></li>
-                <li><a href="index.html#programas">Programas</a></li>
-                <li><a href="index.html#cta">Donar</a></li>
-                <li><a href="index.html#contacto-home">Contacto</a></li>
+                <li><a href="../index.html#hero">Inicio</a></li>
+                <li><a href="../index.html#nosotros">Nosotros</a></li>
+                <li><a href="../index.html#programas">Programas</a></li>
+                <li><a href="../index.html#cta">Donar</a></li>
+                <li><a href="../index.html#contacto-home">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -116,4 +116,23 @@
         </div>
     </footer>
     </body>
+    <button id="editToggleBtn" onclick="toggleEditMode()" 
+style="
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 2000; 
+  background-color: #6b5b95; 
+  color: white; 
+  border: none; 
+  padding: 10px 16px; 
+  border-radius: 8px; 
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+">
+✏️ Editar textos
+</button>
+
+<script src="../scripts/editor.js"></script>
 </html>

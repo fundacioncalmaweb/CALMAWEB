@@ -105,7 +105,7 @@ violencia.<o:p></o:p></span></p></p>
       </article>
 
         <article class="programa">
-        <a href="violencia.html" class="enlace-programa">     
+        <a href="pages/page5.html" class="enlace-programa">     
             <img src="assets/programa5.png" alt="Capacitación Laboral">
             <h3 contenteditable="false" style="outline: none; background-color: transparent;">Acción y Prevención frente a las situaciones de violencias</h3>
         </a>
@@ -139,66 +139,8 @@ violencia.<o:p></o:p></span></p></p>
       </ul>
     </div>
   </footer>
-
-  <script>
-    // JavaScript para controlar el menú desplegable (menú hamburguesa)
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      const navLinks = document.querySelectorAll('.nav-menu ul li a');
-
-      // Alternar el menú al hacer clic en el botón
-      menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.textContent = navMenu.classList.contains('active') ? '✖' : '☰'; // Cambia el ícono
-      });
-
-      // Cerrar el menú al hacer clic en un enlace (importante en móviles)
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            navMenu.classList.remove('active');
-            menuToggle.textContent = '☰'; // Restaura el ícono
-          }
-        });
-      });
-    });
-  </script>
-<script>
-  // Activar/Desactivar modo edición
-  function toggleEditMode() {
-    const editableElements = document.querySelectorAll('h2, h3, p');
-    const isEditing = document.body.classList.toggle('edit-mode');
-
-    editableElements.forEach(el => {
-      el.contentEditable = isEditing;
-      el.style.outline = isEditing ? '2px dashed #6b5b95' : 'none';
-      el.style.backgroundColor = isEditing ? '#fdf7ff' : 'transparent';
-    });
-
-    // Cambiar texto del botón
-    const btn = document.getElementById('editToggleBtn');
-    btn.textContent = isEditing ? '💾 Guardar cambios' : '✏️ Editar textos';
-
-    if (!isEditing) {
-      saveEditedContent();
-    }
-  }
-
-  // Guardar el contenido editado
-  function saveEditedContent() {
-    const content = document.body.innerHTML;
-    const blob = new Blob([content], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'pagina_editada.html';
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-</script>
-<button id="editToggleBtn" onclick="toggleEditMode()" style="
+<button id="editToggleBtn" onclick="toggleEditMode()" 
+style="
   position: fixed; 
   bottom: 20px; 
   right: 20px; 
@@ -211,7 +153,13 @@ violencia.<o:p></o:p></span></p></p>
   font-size: 16px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-">✏️ Editar textos</button>
+">
+✏️ Editar textos
+</button>
 
-
+<script src="scripts/editor.js"></script>
+  
+    
+  </body>
+</html>
 
